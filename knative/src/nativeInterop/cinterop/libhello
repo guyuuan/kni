@@ -1,0 +1,10 @@
+headers = hello.h
+compilerOpts = -Wreturn-type -Wno-macro-redefined -Wno-deprecated-declarations  -Wno-incompatible-pointer-types-discards-qualifiers
+compilerOpts.android = -D__ANDROID_API__=21
+linkerOpts = -v
+linkerOpts.android = {LINK_PATH} -ldl -lc -lm -lhello
+---
+//compilerOpts =  -Wno-macro-redefined -Wno-deprecated-declarations  -Wno-incompatible-pointer-types-discards-qualifiers
+//#include <string>
+//using namespace std;
+//string sayHello();
